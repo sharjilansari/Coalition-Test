@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech.Care Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="TestLogo.png" alt="Tech.Care Logo" />
+        <!-- <h1>Tech.Care</h1> -->
+      </div>
+      <nav>
+        <a href="#">
+          <img src="img\home_FILL0_wght300_GRAD0_opsz24.png" alt="" />
+          Overview</a
+        >
+        <a href="#">
+          <img src="img\group_FILL0_wght300_GRAD0_opsz24.png" alt="" />
+          Patients</a
+        >
+        <a href="#">
+          <img src="img\calendar_today_FILL0_wght300_GRAD0_opsz24.png" alt="" />
+          Schedule</a
+        >
+        <a href="#">
+          <img src="img\chat_bubble_FILL0_wght300_GRAD0_opsz24.png" alt="" />
+          Message</a
+        >
+        <a href="#">
+          <img src="img\credit_card_FILL0_wght300_GRAD0_opsz24.png" alt="" />
+          Transactions</a
+        >
+      </nav>
+      <div class="profile">
+        <a href="#">
+          <img
+            src="img\senior-woman-doctor-and-portrait-smile-for-health-2023-11-27-05-18-16-utc.png"
+            alt="Dr. Jose Simmons"
+          />
+          <span>Dr. Jose Simmons</span></a
+        >
+      </div>
+      <div class="setting">
+        <img
+          src="img\settings_FILL0_wght300_GRAD0_opsz24.png"
+          alt=""
+          srcset=""
+        />
+        <img
+          src="img\more_vert_FILL0_wght300_GRAD0_opsz24.png"
+          alt=""
+          srcset=""
+        />
+      </div>
+    </header>
+
+    <main>
+      <aside class="patient-list-fitcontent">
+        <h2>Patients</h2>
+        <input type="text" placeholder="Search patients" />
+        <ul id="patient-list">
+          <!-- Patient list will be populated here -->
+        </ul>
+      </aside>
+
+      <section class="diagnosis-history">
+        <h2>Diagnosis History</h2>
+        <div class="chart_box">
+          <div class="chart">
+            <canvas id="bloodPressureChart"></canvas>
+          </div>
+          <div class="stats">
+            <div class="sys">
+              <div>Systolic:</div>
+              <div id="systolic"></div>
+              <span id="systolic_level" class="stats">Higher Than Average</span>
+            </div>
+            <div class="dis">
+              <div>Diastolic:</div>
+              <div id="diastolic"></div>
+              <span id="diastolic_level" class="stats">Lower Than Average</span>
+            </div>
+          </div>
+        </div>
+        <div class="vitals">
+            <div class="vital-sign" id="respiratory-rate">
+              <div class="icon"><img src="img\respiratory rate.png" alt=""></div>
+              <div class="title">Respiratory Rate</div>
+              <div class="value" id="respiratory-value"></div>
+              <div class="description" id="respiratory-levels"></div>
+            </div>
+            <div class="vital-sign" id="temperature">
+              <div class="icon"><img src="img\temperature.png" alt=""></div>
+              <div class="title">Temperature</div>
+              <div class="value" id="temperature-value"></div>
+              <div class="description" id="temperature-levels"></div>
+            </div>
+            <div class="vital-sign" id="heart-rate">
+              <div class="icon"><img src="img\HeartBPM.png" alt=""></div>
+              <div class="title">Heart Rate</div>
+              <div class="value" id="heart-value"></div>
+              <div class="description" id="heart-levels"></div>
+            </div>
+      </div>
+        <div class="diagnostic-list">
+          <h2>Diagnostic List</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Problem/Diagnosis</th>
+                <th>Description</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="diagnostic-list-body">
+              <!-- Diagnostic list items will be populated here -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="patient-details">
+        <h2 id="patient_name"></h2>
+        <img id="patient_img" src="" alt="Jessica Taylor" />
+        <ul>
+          <li>
+            <img src="img\BirthIcon.png" alt="" />
+            <div class="details">
+              Date Of Birth
+              <span class="detail_info" id="patient_DOB"></span>
+            </div>
+          </li>
+          <li>
+            <img src="img\FemaleIcon.png" alt="" />
+            <div class="details">
+              Gender
+              <span class="detail_info" id="patient_gender"></span>
+            </div>
+          </li>
+          <li>
+            <img src="img\PhoneIcon.png" alt="" />
+            <div class="details">
+              Contact Info.
+              <span class="detail_info" id="patient_contact"></span>
+            </div>
+          </li>
+          <li>
+            <img src="img\PhoneIcon.png" alt="" />
+            <div class="details">
+              Emergency Contact
+              <span class="detail_info" id="patient_Econtact"></span>
+            </div>
+          </li>
+          <li>
+            <img src="img\InsuranceIcon.png" alt="" />
+            <div class="details">
+              Insurance Provider
+              <span class="detail_info" id="patient_insurance"></span>
+            </div>
+          </li>
+          <li><button class="detail_button">Show All Information</button></li>
+        </ul>
+        <div class="lab-results">
+          <h2>Lab Results</h2>
+          <ul id="lab-results-list">
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

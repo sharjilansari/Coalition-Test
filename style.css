@@ -1,0 +1,343 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    padding: 5px;
+    /* width: 80%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f7fb;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 10px 20px; */
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.setting{
+    cursor: pointer;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+header nav a {
+    margin: 0 10px;
+    color: #4a4a4a;
+    text-decoration: none;
+}
+
+header nav a:hover{
+    background-color: #01F0D0;
+    border-style: none;
+    border-radius: 20px;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+header .profile > a {
+    display: flex;
+    align-items: center;
+    color: #4a4a4a;
+    text-decoration: none;
+}
+
+header .profile img {
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    /* padding: 20px; */
+}
+
+aside {
+    width: 25%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+aside input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside ul li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+section.diagnosis-history {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* border-radius: 8px; */
+    /* margin-right: 20px; */
+}
+
+section.patient-details {
+    width: 20%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+section.patient-details #patient_img {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+section.patient-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+section.patient-details ul li{
+    display: flex;
+    padding-bottom: 0.5rem;
+}
+
+section.patient-details ul li .details{
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+    color: #4a4a4a;
+    opacity: 0.8;
+}
+
+section.patient-details ul li .details .detail_info{
+    font-size: medium;
+    color: black;
+}
+
+section.patient-details ul li .detail_button{
+    background-color: #01F0D0;
+    border-style: none;
+    border-radius: 20px;
+    width: 100%;
+    padding: 1em;
+    cursor: pointer;
+}
+
+#patient-list {
+    height: 100%; 
+    overflow-y: scroll;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    max-width: fit-content;
+}
+
+#patient-list li {
+    /* padding: 5px; */
+    border-bottom: 1px solid #ccc; /* Optional: adds a divider between patients */
+}
+
+#patient-list li:hover{
+    background-color: #01F0D0;
+}
+
+.patient-list-fitcontent{
+    max-width: fit-content;
+    height: 100vh;
+}
+
+.chart_box{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* height: 100%; */
+    /* flex: 1; */
+}
+
+.stats {
+    font-size: small;
+    color: #072635;
+}
+
+.stats > .sys > div, .stats > .dis > div {
+    margin-bottom: 1rem;
+    font-size: small;
+    color: #072635;
+}
+.stats  #systolic{
+    font-size: 22px;
+    color: #072635;
+}
+
+.stats  #diastolic{
+    font-size: 22px;
+    color: #072635;
+}
+
+.stats .sys{
+    margin-bottom: 2rem;
+}
+
+.chart{
+    display: flex;
+    width: 70%;
+}
+
+
+.diagnostic-lab-section {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.diagnostic-list,
+.lab-results {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 10px;
+    /* padding: 20px; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.diagnostic-list h2,
+.lab-results h2 {
+    margin-bottom: 20px;
+}
+
+.diagnostic-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.diagnostic-list th,
+.diagnostic-list td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-weight: 300;
+    font-size: small;
+    opacity: 0.7;
+}
+
+.diagnostic-list th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+}
+
+.lab-results ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    max-height: 200px;
+    font-weight: 300;
+    font-size: small;
+    opacity: 0.7;
+}
+
+.lab-results li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.lab-results li:last-child {
+    border-bottom: none;
+}
+
+.lab-results .download {
+    cursor: pointer;
+    font-size: 1.2em;
+    /* color: #00f; */
+}
+
+.vital-signs-section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.vital-sign {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    text-align: left;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.vital-sign .icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.vital-sign .value {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.vital-sign .description {
+    color: #888;
+    margin-top: 5px;
+    font-size: small;
+    font-weight: 300;
+}
+
+.vitals{
+    display: flex;
+}
+
+.list_main_container{
+    display: flex;
+    cursor: pointer;
+}
+
+.list_main_container img{
+    margin-right: 0.75em;
+    height: 40px;
+    width: 40px;
+}
+
+.list_second_container .patient_detail{
+    font-weight: 300;
+    font-size: small;
+    opacity: 0.7;
+}
+
+.list_second_container{
+    display: flex;
+    flex-direction: column;
+}
